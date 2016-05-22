@@ -211,7 +211,7 @@ class CoreTests(CaravelTestCase):
         # Confirm that public doesn't have access to other datasets.
         resp = self.client.get('/slicemodelview/list/')
         data = resp.data.decode('utf-8')
-        assert '<a href="/tablemodelview/edit/2">wb_health_population</a>' not in data
+        assert 'wb_health_population</a>' not in data
 
         resp = self.client.get('/dashboardmodelview/list/')
         data = resp.data.decode('utf-8')

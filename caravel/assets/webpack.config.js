@@ -10,6 +10,7 @@ var config = {
     explore: APP_DIR + '/javascripts/explore.js',
     welcome: APP_DIR + '/javascripts/welcome.js',
     sql: APP_DIR + '/javascripts/sql.js',
+    carapal: APP_DIR + '/javascripts/carapal.jsx',
     standalone: APP_DIR + '/javascripts/standalone.js'
   },
   output: {
@@ -22,6 +23,10 @@ var config = {
         test: /\.jsx?/,
         include: APP_DIR,
         exclude: APP_DIR + '/node_modules',
+        query: {
+          presets: ['es2015'],
+        },
+        //plugins: ['transform-runtime'],
         loader: 'babel'
       },
     /* for require('*.css') */
